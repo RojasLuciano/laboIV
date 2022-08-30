@@ -7,7 +7,7 @@ import { User } from './class/user';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Clase1';
+  title = 'Luciano Rojas';
   myUser:User;
   /**
    *
