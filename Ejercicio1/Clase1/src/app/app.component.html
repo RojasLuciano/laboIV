@@ -1,0 +1,29 @@
+<router-outlet></router-outlet>
+<h1>{{title}}</h1>
+
+{{myUser.name}}
+<br><br>
+
+<div>
+    <p>
+        <label>Edad Uno </label>
+        <input type="text" name="edadUno" [(ngModel)]="edadUno">
+    </p>
+    <p>
+        <label>Edad Dos </label>
+        <input type="text" name="edadDos" [(ngModel)]="edadDos">
+    </p>
+    <p>
+        
+        <button (click)="calcular()">
+            Calcular
+        </button>
+    </p>
+    <p>
+        <button (click)="limpiar()">
+            Limpiar
+        </button>
+    </p>
+    <p>Resultado promedio: {{resultadoPromedio}}</p>    
+    <p>Resultado suma: {{resultadoSuma}}</p>    
+</div>
