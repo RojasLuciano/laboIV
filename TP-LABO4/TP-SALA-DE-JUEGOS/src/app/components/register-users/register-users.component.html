@@ -1,0 +1,34 @@
+<div class="wrapper">
+  <div *ngIf="!loading" class="body">   <!-- spinner -->
+    <img class="logo" src="../../../assets/images/login.png" alt="Login">
+    <h1>Registrarse</h1>
+    <form (ngSubmit)="register()" [formGroup]="registrarUsuario">
+
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" formControlName="email" placeholder="name@example.com">
+        <label>Correo</label>
+        <span *ngIf="registrarUsuario.get('email')?.hasError('required') && registrarUsuario.get('email')?.touched" class="text-danger">El correo es requerido</span>
+        <span *ngIf="registrarUsuario.get('email')?.hasError('email') && registrarUsuario.get('email')?.touched" class="text-danger">El formato no es valido</span>
+
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" formControlName="password" placeholder="Password">
+        <label>Contraseña</label>
+        <span *ngIf="registrarUsuario.get('password')?.hasError('required') && registrarUsuario.get('email')?.touched" class="text-danger">La contraseña es requerida</span>
+        <span *ngIf="registrarUsuario.get('password')?.hasError('minlenght') && registrarUsuario.get('password')?.touched" class="text-danger">La contraseña debe tener como minimo 6 caracteres</span>
+      </div>
+      
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" formControlName="repetirPassword" placeholder="Password">
+        <label>Repetir contraseña</label>
+      </div>
+
+      <div class="d-grid gap-2 mb-3">
+        <button class="btn btn-primary lgn" [disabled]="registrarUsuario.invalid" type="submit">Aceptar</button>
+      </div>
+      <a routerLink="/login">Volver</a>
+    </form>
+  </div>
+  <app-spinner *ngIf="loading"></app-spinner> <!-- spinner -->
+</div>
