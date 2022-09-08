@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutMeComponent } from './components/about-me/about-me.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterUsersComponent } from './components/register-users/register-users.component';
 import { RestorePasswordComponent } from './components/restore-password/restore-password.component';
@@ -13,6 +15,10 @@ const routes: Routes = [
   { path: 'validate-email', component: ValidateEmailComponent },
   { path: 'restore-password', component: RestorePasswordComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'about-me', component: AboutMeComponent },
+  { path: 'home', component: HomeComponent },
+
+
   { path: '**', redirectTo: 'login', pathMatch: 'full' }, // Si no encuentra la ruta, redirige a login
 ];
   @NgModule({

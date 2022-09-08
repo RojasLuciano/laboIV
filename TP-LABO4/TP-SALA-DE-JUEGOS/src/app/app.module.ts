@@ -19,6 +19,8 @@ import { ValidateEmailComponent } from './components/validate-email/validate-ema
 import { RestorePasswordComponent } from './components/restore-password/restore-password.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { environment } from 'src/environments/environment';
+import { HomeComponent } from './components/home/home.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { environment } from 'src/environments/environment';
     RegisterUsersComponent,
     ValidateEmailComponent,
     RestorePasswordComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    HomeComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,
