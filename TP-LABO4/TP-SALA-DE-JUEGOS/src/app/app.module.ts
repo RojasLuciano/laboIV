@@ -13,7 +13,6 @@ import { ToastrModule } from 'ngx-toastr';
 //Componentes
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RegisterUsersComponent } from './components/register-users/register-users.component';
 import { ValidateEmailComponent } from './components/validate-email/validate-email.component';
 import { RestorePasswordComponent } from './components/restore-password/restore-password.component';
@@ -27,7 +26,6 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent,
     RegisterUsersComponent,
     ValidateEmailComponent,
     RestorePasswordComponent,

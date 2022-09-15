@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { ToastrService } from 'ngx-toastr';    // Tengo que agregar esto en cada componente que quiera usar toastr
 import { Router } from '@angular/router';
-import { FirebaseErrorService } from 'src/app/service/firebase-error.service';
+import { FirebaseErrorService } from 'src/app/service/errorFirebase/firebase-error.service';
 
 @Component({
   selector: 'app-restore-password',
@@ -42,6 +42,11 @@ export class RestorePasswordComponent implements OnInit {
       )
   }
 
+  // autoLogin(): void {
+  //   this.usuario.email = 'auto@session.com';
+  //   this.usuario.password = '123456';
+  // }
+  
   ngOnInit(): void {
   }
 } // End of RestorePasswordComponent class

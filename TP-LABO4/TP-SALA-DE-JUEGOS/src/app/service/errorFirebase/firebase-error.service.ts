@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FirebaseCodeErrorEnum } from '../utils/firebase-code-error';
+import { FirebaseCodeErrorEnum } from '../../utils/firebase-code-error';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +7,6 @@ import { FirebaseCodeErrorEnum } from '../utils/firebase-code-error';
 export class FirebaseErrorService {
 
   constructor() { }
-
 
   codeError(code: string) {
     switch (code) {
@@ -30,15 +29,5 @@ export class FirebaseErrorService {
         return 'Error al loguear al usuario';
     }
   }
-
-
-
-
-
-
-
-
-
-
 } // End of FirebaseErrorService class
 
