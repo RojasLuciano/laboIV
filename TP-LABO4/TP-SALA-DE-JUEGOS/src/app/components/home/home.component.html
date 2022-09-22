@@ -10,8 +10,10 @@
         </a>
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
           <li><a routerLink="/home" class="nav-link px-2 link-secondary">Home</a></li>
-          <li><a routerLink="/home" class="nav-link px-2 link-secondary">Games</a></li>
+          <li><a routerLink="/games" class="nav-link px-2 link-secondary">Games</a></li>
           <li><a routerLink="/about-me" class="nav-link px-2 link-dark">About me</a></li>
+          <li><a routerLink="/chat" class="nav-link px-2 link-dark">Chat</a></li>
+
         </ul>
         <div class="col-md-3 text-end">
           <button type="button" class="btn btn-outline-primary me-2" (click)="logout()">LogOut</button>
@@ -19,7 +21,7 @@
       </header>
     </div>
     <div class="card-body p-4">
-      <h3>SPRINT 2</h3>
+      <h3>SPRINT 3</h3>
       <a class="navbar-brand" *ngIf="userLogged|async as user;">
         <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
           <h1 class="display-4 fw-normal">Bienvenido!</h1>

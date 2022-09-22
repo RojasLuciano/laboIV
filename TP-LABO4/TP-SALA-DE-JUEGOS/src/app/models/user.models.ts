@@ -1,11 +1,11 @@
 export class User {
   email: string;
-  displayName: string;
+  name: string;
   photoURL: string;
   emailVerified: boolean;
   constructor() {
     this.email = '';
-    this.displayName = '';
+    this.name = '';
     this.photoURL = '';
     this.emailVerified = false;
   }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
     providedIn: 'root',
@@ -11,10 +12,10 @@ export class LogsService  {
     constructor(private db: AngularFirestore) { }
 
 
-    public async registerUserLoginTime(user: any) {
+    public async registerUserLoginTime(user: FormGroup) {
         this.logs = {
-            email: user.email,
-            loginTime: new Date()
+            email: user.get('email')?.value,
+            loginTime: new Date().toLocaleString(),
         }
         return await this.db.collection('logs').add(this.logs);
     }

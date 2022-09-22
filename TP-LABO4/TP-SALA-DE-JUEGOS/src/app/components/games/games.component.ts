@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/service/auth/auth.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-games',
+  templateUrl: './games.component.html',
+  styleUrls: ['./games.component.scss']
 })
-export class HomeComponent implements OnInit {
-
+export class GamesComponent implements OnInit {
   userLogged = this.auth.getAuth();
 
   constructor(
@@ -17,8 +16,7 @@ export class HomeComponent implements OnInit {
   logout() {
     this.auth.logout();
   }
-
   ngOnInit(): void {
   }
 
-} // End class
+}
