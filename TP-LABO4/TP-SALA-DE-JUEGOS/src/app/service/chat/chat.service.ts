@@ -42,14 +42,26 @@ export class ChatService {
   }
 
   addMessage(message: string) {
+    var date = new Date();
     let newMessage: Message = {
       name: this.userLog.email.substr(0, this.userLog.email.indexOf('@')),
       message: message,
-      date: new Date().toLocaleString(),
+      date: this.formatTime(date),
       uid: this.userLog.id,
       email: this.userLog.email,
       photo: this.userLog.photoURL
     };
     return this.itemsCollection?.add(newMessage);
+  }
+
+  formatTime(time: any) {
+    var hours = time.getHours();
+    var minutes = time.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; 
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    var strTime = hours + ':' + minutes + ' ' + ampm;
+    return strTime;
   }
 }

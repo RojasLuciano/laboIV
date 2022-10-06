@@ -8,10 +8,19 @@ import { AuthService } from 'src/app/service/auth/auth.service';
 })
 export class GamesComponent implements OnInit {
   userLogged = this.auth.getAuth();
+  chatOn: boolean = true;
+  isDisplayed = "";
 
   constructor(
     private auth: AuthService,
   ) { }
+
+  TurnOnChat(isOn: string) {
+    if (this.isDisplayed == "" || this.isDisplayed == isOn) {
+      this.chatOn = !this.chatOn;
+    }
+    this.isDisplayed = isOn;
+  }
 
   logout() {
     this.auth.logout();

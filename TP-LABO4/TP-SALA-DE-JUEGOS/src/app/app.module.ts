@@ -24,6 +24,9 @@ import { HangmanComponent } from './components/hangman/hangman.component';
 import { GamesComponent } from './components/games/games.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardsComponent } from './components/cards/cards.component';
+import { AskedComponent } from './components/asked/asked.component';
+import { ErrorComponent } from './components/error/error.component';
+import { AnagramComponent } from './components/anagram/anagram.component';
 
 
 @NgModule({
@@ -39,7 +42,10 @@ import { CardsComponent } from './components/cards/cards.component';
     ChatComponent,
     HangmanComponent,
     GamesComponent,
-    CardsComponent
+    CardsComponent,
+    AskedComponent,
+    ErrorComponent,
+    AnagramComponent
   ],
   imports: [
     BrowserModule,

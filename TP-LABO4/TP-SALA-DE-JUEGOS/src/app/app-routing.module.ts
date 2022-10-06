@@ -10,6 +10,8 @@ import { ChatComponent } from './components/chat/chat.component';
 import { HangmanComponent } from './components/hangman/hangman.component';
 import { GamesComponent } from './components/games/games.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { AskedComponent } from './components/asked/asked.component';
+import { AnagramComponent } from './components/anagram/anagram.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -18,12 +20,14 @@ const routes: Routes = [
   { path: 'validate-email', component: ValidateEmailComponent },
   { path: 'restore-password', component: RestorePasswordComponent },
   { path: 'about-me', component: AboutMeComponent },
-  { path: 'chat', component: ChatComponent },
   { path: 'home', component: HomeComponent },
-  {
-    path: 'games', component: GamesComponent, children: [
+  { path: 'games', component: GamesComponent, children: [
       { path: 'hangman', component: HangmanComponent },
       { path: 'cards', component: CardsComponent },
+      { path: 'asked', component: AskedComponent },
+      { path: 'chat', component: ChatComponent },
+      { path: 'anagram',  component: AnagramComponent },
+
     ]
   },
   { path: '**', redirectTo: 'login', pathMatch: 'full' }, // Si no encuentra la ruta, redirige a login

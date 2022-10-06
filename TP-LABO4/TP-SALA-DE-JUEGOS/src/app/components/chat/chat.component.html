@@ -1,17 +1,34 @@
 <div class="chat">
     <div class="chat-window">
-        <h3>Chat</h3>
+        <h3 style="align-self:center;">Chat</h3>
         <hr>
         <div class="app-message" id="app-message">
             <div *ngFor="let chat of chatService.chats" [ngClass]="{'text-right': chatService.userLog.uid == chat.uid,
             'text-left': chatService.userLog.uid != chat.uid}">
-            <span class="badge" [ngClass]="{'bg-success': chatService.userLog.uid == chat.uid,
-            'bg-primary': chatService.userLog.uid != chat.uid}">{{chat.name}}</span>
-            <p>{{chat.message}}</p>
-            <span class="date">{{chat.date}}</span>
+            <div>
+                <div class="d-flex flex-row justify-content-start mb-4">
+                    <div class="img_cont_msg">
+                        <img src="../../../assets/images/users/dummy.png" alt="avatar 1"
+                            style="width:45px; height: 50%; margin-left: 20%;">
+                        <div class="msg_cotainer" style= "align-self: center;">
+                            {{chat.name}}
+                        </div>
+                    </div>
+                        <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
+                            <p>
+                                {{chat.message}}
+                            </p>
+                            <p class="small mb-0">
+                                <small>
+                                    {{chat.date}}
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <input type="text" name="message" [(ngModel)]="message" (keyup.enter)="sendMessage()" class="form-control"
+                id="app-message-input" placeholder="Escribe tu mensaje...">
         </div>
     </div>
-    <input type="text" name="message" [(ngModel)]="message" (keyup.enter)="sendMessage()" class="form-control"
-    id="app-message-input" placeholder="Escribe tu mensaje...">
-</div>
-</div>

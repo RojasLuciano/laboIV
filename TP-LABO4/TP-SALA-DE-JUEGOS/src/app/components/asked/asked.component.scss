@@ -1,0 +1,27 @@
+.fondoPokemon {
+    background-image: url(../../../assets/images/asked/pokemon_background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 470px;
+    width: 70vw;
+    flex: 1;
+    align-content: center;
+    align-items: flex-start;
+
+}
+
+.pokemon {
+    width: 40%;
+    height: 40%;
+    margin: 0 auto;
+    margin-top: 15%;
+    margin-left: 10%;
+
+}
+
+.pokemon_tittle{
+    font-size: 2em;
+    margin-left: 33%;
+    font-weight: bold;
+}

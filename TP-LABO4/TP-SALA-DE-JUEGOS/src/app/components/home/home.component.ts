@@ -19,6 +19,15 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.auth.getAuth().subscribe(user => {
+      if (user) {
+
+      } else {
+        this.auth.logout();
+      }
+    }
+    );
+
   }
 
 } // End class
